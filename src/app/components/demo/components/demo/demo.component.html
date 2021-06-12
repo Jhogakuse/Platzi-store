@@ -1,0 +1,29 @@
+<h2> {{ title }}</h2>
+<br>
+<input type="text" [(ngModel)]="title"/>
+<br>
+<input type="text" [(ngModel)]="power"/>
+<br>
+{{power | exponential}}
+<br>
+
+<div *ngIf="title === 'true'; then store else bienvenida">
+    Success
+</div>
+
+<button (click)="addItem(title)">Add item</button>
+
+<ul>
+    <li *ngIf="fruts.length === 0">No fruts</li>}
+    <li *ngFor="let frut of fruts; index as idx">
+        {{frut}} {{idx}} <button (click)="deleteItem(idx)">Delete</button>
+    </li>
+</ul>
+
+<ng-template #store>
+    Show Products
+</ng-template>
+
+<ng-template #bienvenida>
+    Welcome to our store
+</ng-template>
