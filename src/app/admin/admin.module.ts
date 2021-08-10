@@ -8,6 +8,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { ProductsTableComponent } from './components/products-table/products-table.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { ProductsDashboardComponent } from './components/products-dashboard/products-dashboard.component';
+import { FormProductComponent } from './components/form-product/form-product.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ProductsDashboardComponent } from './components/products-dashboard/prod
     NavComponent,
     ProductsTableComponent,
     ProductsListComponent,
-    ProductsDashboardComponent
+    ProductsDashboardComponent,
+    FormProductComponent
   ],
   imports: [
     AdminRoutingModule,
