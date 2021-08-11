@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { ProductsService } from 'src/app/core/services/products/products.service';
+import { MyValidator } from 'src/app/utils/validators';
 
 @Component({
   selector: 'app-form-product',
@@ -38,11 +39,19 @@ export class FormProductComponent implements OnInit {
     }
   }
 
+  get hasErrorPriceInvalid(): boolean {
+    return this.priceField.hasError('invalid');
+  }
+
+  get priceField() {
+    return this.form.get('price');
+  }
+
   private buildForm() {
     this.form = this.formBuilder.group({
       id: ['', Validators.required],
       title: ['', Validators.required],
-      price: [0, Validators.required],
+      price: [0, [Validators.required, MyValidator.isPriceValid]],
       image: [''],
       description: ['', Validators.required]
     });
