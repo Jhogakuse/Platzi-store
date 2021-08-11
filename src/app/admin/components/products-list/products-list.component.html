@@ -27,8 +27,9 @@
         <td mat-cell *matCellDef="let product">
             <div class="products-table-btn-container">
                 <button mat-mini-fab color="primary" 
-                aria-label="Example icon button with a delete icon" 
-                class="products-table-actionBtn">
+                aria-label="Example icon button with a edit icon" 
+                class="products-table-actionBtn"
+                [routerLink]="['edit', product.id]">
                     <mat-icon>edit</mat-icon>
                 </button>
                 <button mat-mini-fab color="warn" 

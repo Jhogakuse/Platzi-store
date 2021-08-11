@@ -9,6 +9,7 @@ import { ProductsTableComponent } from './components/products-table/products-tab
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { ProductsDashboardComponent } from './components/products-dashboard/products-dashboard.component';
 import { FormProductComponent } from './components/form-product/form-product.component';
+import { FormProductEditComponent } from './components/form-product-edit/form-product-edit.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormProductComponent } from './components/form-product/form-product.com
     ProductsTableComponent,
     ProductsListComponent,
     ProductsDashboardComponent,
-    FormProductComponent
+    FormProductComponent,
+    FormProductEditComponent
   ],
   imports: [
     AdminRoutingModule,
