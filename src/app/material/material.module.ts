@@ -17,6 +17,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatStepperModule } from '@angular/material/stepper'; 
 
 const modules = [
   CommonModule,
@@ -35,7 +36,8 @@ const modules = [
   MatPaginatorModule,
   MatSortModule,
   MatGridListModule,
-  MatMenuModule
+  MatMenuModule,
+  MatStepperModule
 ];
 
 @NgModule({
